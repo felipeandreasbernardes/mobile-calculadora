@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calculadora"
+             x:Class="Calculadora.MainPage"
+             BackgroundColor="#474747">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="plainButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="28" />
+            </Style>
+            <Style x:Key="lightButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#616161"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="28" />
+            </Style>
+            <Style x:Key="blueButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#324675"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="28" />
+            </Style>
+            <Style x:Key="ligthBlue" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#7787ad"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="28" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="ContentPanel" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label x:Name="historyLabel" Text="" Grid.Row="0" HorizontalTextAlignment="End" HeightRequest="20"  VerticalTextAlignment="End" TextColor="Wheat" Margin="0,0,20,0" 
+        FontSize="48" Grid.ColumnSpan="4"/>
+
+            <Label x:Name="firstLabel" Text="" Grid.Row="1" HorizontalTextAlignment="End" HeightRequest="20"  VerticalTextAlignment="End" TextColor="White"
+        FontSize="60" Grid.ColumnSpan="4"/>
+
+            <!--Números-->
+            <Button x:Name="btn1" Text = "1" Grid.Row="5" Grid.Column="0" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn2" Text = "2" Grid.Row="5" Grid.Column="1" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn3" Text = "3" Grid.Row="5" Grid.Column="2" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn4" Text = "4" Grid.Row="4" Grid.Column="0" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn5" Text = "5" Grid.Row="4" Grid.Column="1" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn6" Text = "6" Grid.Row="4" Grid.Column="2" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn7" Text = "7" Grid.Row="3" Grid.Column="0" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn8" Text = "8" Grid.Row="3" Grid.Column="1" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn9" Text = "9" Grid.Row="3" Grid.Column="2" Style="{StaticResource plainButton}" />
+            <Button x:Name="btn0" Text = "0" Grid.Row="6" Grid.Column="1" Style="{StaticResource plainButton}" />
+
+            <Button x:Name="btnDot" Text = "." Grid.Row="6" Grid.Column="0" Style="{StaticResource plainButton}" />
+
+            <!--Operações-->
+            <Button x:Name="Div" Text = "÷" Grid.Row="3" Grid.Column="3" Style="{StaticResource lightButton}" />
+            <Button x:Name="Mult" Text = "x" Grid.Row="4" Grid.Column="3" Style="{StaticResource lightButton}" />
+            <Button x:Name="Sum" Text = "+" Grid.Row="6" Grid.Column="3" Style="{StaticResource lightButton}" />
+            <Button x:Name="Sub" Text="-" Grid.Row="5" Grid.Column="3" Style="{StaticResource lightButton}"/>
+            <Button x:Name="Delete" Text = "DEL" Grid.Row="2" Grid.Column="3" Style="{StaticResource blueButton}" />
+            <Button x:Name="Clear" Text = "AC" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource ligthBlue}" />
+            <Button x:Name="Equal" Text = "=" Grid.Row="6" Grid.Column="2" Style="{StaticResource plainButton}" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
